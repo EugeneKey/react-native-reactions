@@ -57,7 +57,7 @@ const EmojiItem = (props: EmojiItemProps) => {
     isModal = true,
     setShowPopUpCard = () => {},
     onTap = () => {},
-    loaded,
+    // loaded,
     onEmojiCloseModal = () => {},
     setTouchRelease = () => {},
   } = props;
@@ -67,7 +67,7 @@ const EmojiItem = (props: EmojiItemProps) => {
     onLayout,
     scaled,
     childRef,
-    emojiAnimatedScaled,
+    // emojiAnimatedScaled,
     wavedEmoji,
   } = useEmojiItem(props);
 
@@ -96,7 +96,7 @@ const EmojiItem = (props: EmojiItemProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, scaled, isTouchRelease]);
 
-  const isEmojiSelected = selectedEmoji && selectedEmoji.id === data.id
+  const isEmojiSelected = selectedEmoji && selectedEmoji.id === data.id;
 
   return (
     <>
@@ -109,7 +109,11 @@ const EmojiItem = (props: EmojiItemProps) => {
         hitSlop={{ bottom: 30, top: 30 }}
         ref={childRef}
         onPress={onEmojiPress}
-        style={[styles.root, emojiContainerStyle, isEmojiSelected && emojiSelectedContainerStyle]}
+        style={[
+          styles.root,
+          emojiContainerStyle,
+          isEmojiSelected && emojiSelectedContainerStyle,
+        ]}
         onLayout={onLayout}>
         <Animated.View style={wavedEmoji}>
           <EmojiButton
