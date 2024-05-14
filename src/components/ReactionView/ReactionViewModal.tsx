@@ -93,7 +93,8 @@ const ReactionViewModal = ({ touchableProps, ...props }: ReactionViewProps) => {
         setLoaded(false);
         checkTouchRelease && setTouchRelease(true);
       }}
-      {...panResponder.panHandlers}>
+      // {...panResponder.panHandlers}
+    >
       {React.isValidElement(children) && (
         <Pressable
           {...touchableProps}
