@@ -14,15 +14,15 @@ Commit messages should be formatted as:
 [optional footer]
 ```
 
-Where type can be one of the following:
+Это список типов для коммитов в формате Conventional Commits:
 
-- feat
-- fix
-- docs
-- chore
-- style
-- refactor
-- test
+feat: новая функциональность.
+fix: исправление бага.
+docs: изменения в документации.
+chore: рутинные задачи (обновления зависимостей, настройка tooling), не влияющие на код приложения.
+style: правки оформления кода (форматирование, пробелы, без изменения логики).
+refactor: переписывание/оптимизация кода без нового функционала и без исправления багов.
+test: добавление или правка тестов.
 
 and an optional scope can be a component
 
