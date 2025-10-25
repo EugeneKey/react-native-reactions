@@ -26,8 +26,16 @@ const ReactionModal = () => {
         setIsVisible(false);
       },
       sendUpdatedValues: (props: ModalProps) => {
+        const currentIndex = modalProps.current?.itemIndex;
+        if (
+          typeof currentIndex === 'number' &&
+          typeof props.itemIndex === 'number' &&
+          props.itemIndex !== currentIndex
+        ) {
+          return;
+        }
         modalProps.current = { ...modalProps.current, ...props };
-        setUpdatedPosition(props.position ?? 0);
+        setUpdatedPosition(props?.position ?? 0);
       },
     }),
     []

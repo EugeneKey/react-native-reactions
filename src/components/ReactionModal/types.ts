@@ -8,6 +8,7 @@ export interface ModalProps {
   directTouchLoad?: boolean;
   position?: number;
   panResponder?: any;
+  itemIndex?: number;
 }
 
 export interface RefProps {
